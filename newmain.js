@@ -131,7 +131,7 @@ function update(click) {
 	    var chart = $("#chartContainer").CanvasJSChart();
 		chart.options.data[runNumber].dataPoints.push({
 			x: (Date.now() - beginTime)/1000.0,
-			y: (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/4) * 100) / 100)
+			y: (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100)
 		});
 		chart.render();
 	}
@@ -141,13 +141,13 @@ function update(click) {
 	if (timediffs.length < 2) {
 		$("div#Result").html("\
 		Tap Speed: " + (clickTimes.length.toString() + " taps / " + streamtime.toFixed(3)) + " seconds.<br>\
-		Stream Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/4) * 100) / 100).toFixed(2) + " bpm.<br>\
+		Stream Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100).toFixed(2) + " bpm.<br>\
 		Unstable Rate: n/a.\
 	");
 	} else {
 	    $("div#Result").html("\
 		    Tap Speed: " + (clickTimes.length.toString() + " taps / " + streamtime.toFixed(3)) + " seconds.<br>\
-		    Stream Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/4) * 100) / 100).toFixed(2) + " bpm.<br>\
+		    Stream Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100).toFixed(2) + " bpm.<br>\
 		    Unstable Rate: " + (Math.round(unstableRate * 100000) / 100000).toFixed(3) + "\
 	    ");
 	    /*dps.push({
