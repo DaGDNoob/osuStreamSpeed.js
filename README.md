@@ -1,4 +1,13 @@
 # osuStreamSpeed.js
+
+## modification
+
+[linkto the](https://dagdnoob.github.io/osuStreamSpeed.js/newindex.html)
+
+modifiy for single tap speed
+
+## original
+
 An osu! stream speed tester using javascript and jquery with CanvasJS for graphs.
 
 You are a dirty cheater if you hold down the key
@@ -10,3 +19,5 @@ make pretty,
 mouse button support
 
 maybe add in some kind of visual aid?
+
+
