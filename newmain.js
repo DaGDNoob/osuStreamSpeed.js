@@ -60,7 +60,7 @@ function beginTest() {
     $("div#status").html("Test ready, press key 1 or key 2 to begin.");
     $("div#Result").html("\
         Tap Speed: 0 taps / 0 seconds<br>\
-        Stream Speed: 0 bpm<br>\
+        Singletap Speed: 0 bpm<br>\
         Unstable Rate: 0.\
     ");
     localStorage.setItem('clickLimit', clickLimit);
@@ -141,13 +141,13 @@ function update(click) {
 	if (timediffs.length < 2) {
 		$("div#Result").html("\
 		Tap Speed: " + (clickTimes.length.toString() + " taps / " + streamtime.toFixed(3)) + " seconds.<br>\
-		Stream Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100).toFixed(2) + " bpm.<br>\
+		Singletap Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100).toFixed(2) + " bpm.<br>\
 		Unstable Rate: n/a.\
 	");
 	} else {
 	    $("div#Result").html("\
 		    Tap Speed: " + (clickTimes.length.toString() + " taps / " + streamtime.toFixed(3)) + " seconds.<br>\
-		    Stream Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100).toFixed(2) + " bpm.<br>\
+		    Singletap Speed: " + (Math.round((((clickTimes.length) / (Date.now() - beginTime) * 60000)/2) * 100) / 100).toFixed(2) + " bpm.<br>\
 		    Unstable Rate: " + (Math.round(unstableRate * 100000) / 100000).toFixed(3) + "\
 	    ");
 	    /*dps.push({
