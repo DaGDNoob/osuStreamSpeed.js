@@ -1,7 +1,5 @@
 # osuStreamSpeed.js
 
-## modification
-
 [linkto the](https://dagdnoob.github.io/osuStreamSpeed.js/newindex.html)
 
 modifiy for single tap speed
